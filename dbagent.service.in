@@ -1,0 +1,13 @@
+[Unit]
+Description=dbagent
+
+[Service]
+Type=forking
+PIDFile=@app_rundir@/dbagent.pid
+ExecStart=@prefix@/sbin/dbagent
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStartPre=/usr/bin/install -d -o @app_user@ -g @app_group@ @app_rundir@ @app_logdir@
+
+[Install]
+WantedBy=multi-user.target
+
