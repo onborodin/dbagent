@@ -11,10 +11,10 @@ fi
 AC_PATH_PROG([perl],[perl])
 dnl AC_SUBST(perl, perl)
 
-AC_CHECK_PROG(HAVE_PP, pp, true, false, /usr/local/bin /usr/bin)
-if test "x$HAVE_PP" = "xfalse"; then
-	AC_MSG_ERROR([Requested program pp not found])
-fi
+dnl AC_CHECK_PROG(HAVE_PP, pp, true, false, /usr/local/bin /usr/bin)
+dnl if test "x$HAVE_PP" = "xfalse"; then
+dnl 	AC_MSG_ERROR([Requested program pp not found])
+dnl fi
 
 AC_PROG_INSTALL
 
